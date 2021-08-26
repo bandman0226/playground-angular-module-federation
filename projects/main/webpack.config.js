@@ -26,7 +26,7 @@ module.exports = {
 
         // For hosts (please adjust)
         remotes: {
-            "orders": "orders@http://localhost:5000/remoteEntry.js",
+            //"orders": "orders@http://localhost:5000/remoteEntry.js",
 
         },
 
@@ -35,6 +35,7 @@ module.exports = {
           "@angular/common": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
           "@angular/common/http": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
           "@angular/router": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
+          "@angular/platform-browser": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
 
           ...sharedMappings.getDescriptors()
         })
