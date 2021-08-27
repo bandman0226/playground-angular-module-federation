@@ -6,7 +6,7 @@ const share = mf.share;
 const sharedMappings = new mf.SharedMappings();
 sharedMappings.register(
   path.join(__dirname, '../../tsconfig.json'),
-  [/* mapped paths to share */]);
+  ['message-bus']);
 
 module.exports = {
   output: {
@@ -25,9 +25,9 @@ module.exports = {
     new ModuleFederationPlugin({
 
         // For hosts (please adjust)
+        // the properties that usually go here has been moved into the route of the main in side the lazy load
+        // this is due to an added helper function from the module federation plugin
         remotes: {
-            //"orders": "orders@http://localhost:5000/remoteEntry.js",
-
         },
 
         shared: share({

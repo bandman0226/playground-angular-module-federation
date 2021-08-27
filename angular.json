@@ -266,6 +266,68 @@
           }
         }
       }
+    },
+    "messge-bus": {
+      "projectType": "library",
+      "root": "projects/messge-bus",
+      "sourceRoot": "projects/messge-bus/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/messge-bus/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/messge-bus/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/messge-bus/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/messge-bus/src/test.ts",
+            "tsConfig": "projects/messge-bus/tsconfig.spec.json",
+            "karmaConfig": "projects/messge-bus/karma.conf.js"
+          }
+        }
+      }
+    },
+    "message-bus": {
+      "projectType": "library",
+      "root": "projects/message-bus",
+      "sourceRoot": "projects/message-bus/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/message-bus/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/message-bus/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/message-bus/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/message-bus/src/test.ts",
+            "tsConfig": "projects/message-bus/tsconfig.spec.json",
+            "karmaConfig": "projects/message-bus/karma.conf.js"
+          }
+        }
+      }
     }
   },
   "defaultProject": "main"

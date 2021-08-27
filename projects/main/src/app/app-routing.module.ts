@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { loadRemoteModule } from '@angular-architects/module-federation';
 import {HomeComponent} from "./home/home.component";
 
-const URL = 'http://localhost:5000/remoteEntry.js';
+// const URL = 'http://localhost:5000/remoteEntry.js';
 
 const routes: Routes = [
   {
@@ -18,7 +18,7 @@ const routes: Routes = [
   {
     path: 'orders',
     loadChildren: () => loadRemoteModule({
-      remoteEntry: URL,
+      // remoteEntry: URL,
       remoteName: 'orders',
       exposedModule: './OrdersModule'
     })

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {MessageBusService} from "message-bus";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'main';
+
+  constructor(private messageBus: MessageBusService) {
+    this.messageBus.event.next('Hello from the shell!');
+  }
 }
